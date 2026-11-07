@@ -1,40 +1,35 @@
 {
   "models": {
     "Majority class": {
-      "accuracy": 0.16342412451361868,
-      "macro_f1": 0.031215161649944256,
+      "accuracy": 0.16358325219084713,
+      "macro_f1": 0.031241283124128313,
       "ms_per_document_cpu": null,
       "ms_per_document_gpu": null,
       "model_size_mb": null,
       "train_minutes": null
     },
     "TF-IDF + logistic regression": {
-      "accuracy": 0.8715953307392996,
-      "macro_f1": 0.876006719685429,
-      "ms_per_document_cpu": 0.34013868353496296,
+      "accuracy": 0.8714703018500487,
+      "macro_f1": 0.8766191399143959,
+      "ms_per_document_cpu": 0.33742661473178964,
       "ms_per_document_gpu": null,
-      "model_size_mb": 22.750237,
+      "model_size_mb": 22.750017,
       "train_minutes": null
     },
     "German BERT, fine-tuned": {
-      "accuracy": 0.9114785992217899,
-      "macro_f1": 0.907969421955775,
-      "ms_per_document_cpu": 217.65308333366798,
-      "ms_per_document_gpu": 5.565066731504095,
+      "accuracy": 0.9074975657254138,
+      "macro_f1": 0.9031680092275006,
+      "ms_per_document_cpu": 209.80924895775388,
+      "ms_per_document_gpu": 5.558185978541414,
       "model_size_mb": 439.738404,
-      "train_minutes": 9.41220394000023
+      "train_minutes": 9.351949668334177
     }
   },
   "top_confusions": [
     {
       "actual": "International",
       "predicted": "Panorama",
-      "articles": 12
-    },
-    {
-      "actual": "Inland",
-      "predicted": "Panorama",
-      "articles": 7
+      "articles": 15
     },
     {
       "actual": "Panorama",
@@ -42,48 +37,53 @@
       "articles": 7
     },
     {
-      "actual": "Wirtschaft",
+      "actual": "Inland",
       "predicted": "Panorama",
-      "articles": 5
+      "articles": 6
     },
     {
-      "actual": "Panorama",
-      "predicted": "Wirtschaft",
+      "actual": "Wirtschaft",
+      "predicted": "Inland",
+      "articles": 6
+    },
+    {
+      "actual": "Wirtschaft",
+      "predicted": "Panorama",
       "articles": 5
     }
   ],
   "examples_of_top_confusion": [
+    "Explosion auf der Einkaufsstraße Istiklal Caddesi: 40 Verletzte. Der Volltext dieses auf Agenturmeldungen basierenden Artikels steht aus rechtlichen Gründen nic",
     "Deutschlands Justizminister Heiko Maas: \"Wir dürfen nicht abwarten, bis es die ersten Toten gibt\". Berlin – Die deutsche Polizei bestätigte am Freitagnachmittag",
-    "Nach über 100 Jahren soll erstmals wieder eine Frau – noch dazu eine schwarze – die Zwanzig-Dollar-Note zieren. Von Barack Obama stammt der schöne Satz, dass er",
-    "Ban \"beunruhigt\" über wachsende Fremdenfeindlichkeit in Österreich, aber Lob für Ankündigung höherer Entwicklungshilfe. Wien – UN-Generalsekretär Ban Ki-moon ha"
+    "Nach über 100 Jahren soll erstmals wieder eine Frau – noch dazu eine schwarze – die Zwanzig-Dollar-Note zieren. Von Barack Obama stammt der schöne Satz, dass er"
   ],
   "confidence": [
     {
       "threshold": 0.0,
       "automated_share": 1.0,
-      "accuracy_automated": 0.9114785992217899
+      "accuracy_automated": 0.9074975657254138
     },
     {
       "threshold": 0.5,
-      "automated_share": 0.995136186770428,
-      "accuracy_automated": 0.9139784946236559
+      "automated_share": 0.9951314508276533,
+      "accuracy_automated": 0.910958904109589
     },
     {
       "threshold": 0.7,
-      "automated_share": 0.9669260700389105,
-      "accuracy_automated": 0.9275653923541247
+      "automated_share": 0.9620253164556962,
+      "accuracy_automated": 0.9230769230769231
     },
     {
       "threshold": 0.9,
-      "automated_share": 0.9280155642023347,
-      "accuracy_automated": 0.9444444444444444
+      "automated_share": 0.9191820837390458,
+      "accuracy_automated": 0.948093220338983
     },
     {
       "threshold": 0.95,
-      "automated_share": 0.8910505836575876,
-      "accuracy_automated": 0.9574235807860262
+      "automated_share": 0.8919182083739046,
+      "accuracy_automated": 0.9541484716157205
     }
   ],
-  "tfidf_and_gbert_both_wrong": 60,
-  "gbert_wrong": 91
+  "tfidf_and_gbert_both_wrong": 71,
+  "gbert_wrong": 95
 }

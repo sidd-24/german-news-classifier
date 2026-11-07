@@ -12,10 +12,11 @@ def splits():
 
 def test_validation_split_is_stratified_and_separate(splits):
     train, validation, test = splits
-    assert len(train) + len(validation) == 9245 and len(test) == 1028
+    assert len(train) + len(validation) == 9242 and len(test) == 1027     # placeholder text removed
     shares = lambda df: df["label"].value_counts(normalize=True).sort_index()
     assert np.allclose(shares(train), shares(validation), atol=0.01)
     assert not set(validation["text"]) & set(train["text"])
+    assert not set(test["text"]) & (set(train["text"]) | set(validation["text"]))       # no leakage into the test set
 
 
 def test_scores():

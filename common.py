@@ -24,6 +24,11 @@ def load() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
             path.parent.mkdir(exist_ok=True)
             urllib.request.urlretrieve(URL.format(split=split), path)
         frames[split] = pd.read_parquet(path)
+    # a placeholder text ("Der Volltext dieses ... Artikels steht aus rechtlichen Gründen nicht mehr zur
+    # Verfügung") appears several times with different labels, in train and test: not an article, so dropped
+    counts = pd.concat(frames.values())["text"].value_counts()
+    repeated = set(counts[counts > 1].index)
+    frames = {split: df[~df["text"].isin(repeated)].reset_index(drop=True) for split, df in frames.items()}
     train, validation = train_test_split(frames["train"], test_size=0.1, stratify=frames["train"]["label"], random_state=SEED)
     return train.reset_index(drop=True), validation.reset_index(drop=True), frames["test"]
 

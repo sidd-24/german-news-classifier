@@ -1,10 +1,10 @@
 {
-  "model": "always 'Panorama'",
-  "accuracy": 0.16342412451361868,
-  "macro_f1": 0.031215161649944256,
+  "model": "always 'Web'",
+  "accuracy": 0.16358325219084713,
+  "macro_f1": 0.031241283124128313,
   "per_class_f1": {
-    "Web": 0.0,
-    "Panorama": 0.2809364548494983,
+    "Web": 0.28117154811715483,
+    "Panorama": 0.0,
     "International": 0.0,
     "Wirtschaft": 0.0,
     "Sport": 0.0,
