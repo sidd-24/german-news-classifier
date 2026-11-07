@@ -1,0 +1,16 @@
+{
+  "model": "always 'Panorama'",
+  "accuracy": 0.16342412451361868,
+  "macro_f1": 0.031215161649944256,
+  "per_class_f1": {
+    "Web": 0.0,
+    "Panorama": 0.2809364548494983,
+    "International": 0.0,
+    "Wirtschaft": 0.0,
+    "Sport": 0.0,
+    "Inland": 0.0,
+    "Etat": 0.0,
+    "Wissenschaft": 0.0,
+    "Kultur": 0.0
+  }
+}

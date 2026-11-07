@@ -1,0 +1,89 @@
+{
+  "models": {
+    "Majority class": {
+      "accuracy": 0.16342412451361868,
+      "macro_f1": 0.031215161649944256,
+      "ms_per_document_cpu": null,
+      "ms_per_document_gpu": null,
+      "model_size_mb": null,
+      "train_minutes": null
+    },
+    "TF-IDF + logistic regression": {
+      "accuracy": 0.8715953307392996,
+      "macro_f1": 0.876006719685429,
+      "ms_per_document_cpu": 0.34013868353496296,
+      "ms_per_document_gpu": null,
+      "model_size_mb": 22.750237,
+      "train_minutes": null
+    },
+    "German BERT, fine-tuned": {
+      "accuracy": 0.9114785992217899,
+      "macro_f1": 0.907969421955775,
+      "ms_per_document_cpu": 217.65308333366798,
+      "ms_per_document_gpu": 5.565066731504095,
+      "model_size_mb": 439.738404,
+      "train_minutes": 9.41220394000023
+    }
+  },
+  "top_confusions": [
+    {
+      "actual": "International",
+      "predicted": "Panorama",
+      "articles": 12
+    },
+    {
+      "actual": "Inland",
+      "predicted": "Panorama",
+      "articles": 7
+    },
+    {
+      "actual": "Panorama",
+      "predicted": "International",
+      "articles": 7
+    },
+    {
+      "actual": "Wirtschaft",
+      "predicted": "Panorama",
+      "articles": 5
+    },
+    {
+      "actual": "Panorama",
+      "predicted": "Wirtschaft",
+      "articles": 5
+    }
+  ],
+  "examples_of_top_confusion": [
+    "Deutschlands Justizminister Heiko Maas: \"Wir dürfen nicht abwarten, bis es die ersten Toten gibt\". Berlin – Die deutsche Polizei bestätigte am Freitagnachmittag",
+    "Nach über 100 Jahren soll erstmals wieder eine Frau – noch dazu eine schwarze – die Zwanzig-Dollar-Note zieren. Von Barack Obama stammt der schöne Satz, dass er",
+    "Ban \"beunruhigt\" über wachsende Fremdenfeindlichkeit in Österreich, aber Lob für Ankündigung höherer Entwicklungshilfe. Wien – UN-Generalsekretär Ban Ki-moon ha"
+  ],
+  "confidence": [
+    {
+      "threshold": 0.0,
+      "automated_share": 1.0,
+      "accuracy_automated": 0.9114785992217899
+    },
+    {
+      "threshold": 0.5,
+      "automated_share": 0.995136186770428,
+      "accuracy_automated": 0.9139784946236559
+    },
+    {
+      "threshold": 0.7,
+      "automated_share": 0.9669260700389105,
+      "accuracy_automated": 0.9275653923541247
+    },
+    {
+      "threshold": 0.9,
+      "automated_share": 0.9280155642023347,
+      "accuracy_automated": 0.9444444444444444
+    },
+    {
+      "threshold": 0.95,
+      "automated_share": 0.8910505836575876,
+      "accuracy_automated": 0.9574235807860262
+    }
+  ],
+  "tfidf_and_gbert_both_wrong": 60,
+  "gbert_wrong": 91
+}

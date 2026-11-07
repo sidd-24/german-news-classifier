@@ -1,0 +1,38 @@
+{
+  "model": "deepset/gbert-base, fine-tuned",
+  "max_length": 512,
+  "epochs_validation": [
+    {
+      "epoch": 1.0,
+      "macro_f1": 0.9051724413057056,
+      "accuracy": 0.9037837837837838
+    },
+    {
+      "epoch": 2.0,
+      "macro_f1": 0.921262313411268,
+      "accuracy": 0.9232432432432433
+    },
+    {
+      "epoch": 3.0,
+      "macro_f1": 0.9330768332897397,
+      "accuracy": 0.932972972972973
+    }
+  ],
+  "accuracy": 0.9114785992217899,
+  "macro_f1": 0.907969421955775,
+  "per_class_f1": {
+    "Web": 0.9822485207100592,
+    "Panorama": 0.8377581120943953,
+    "International": 0.8956228956228957,
+    "Wirtschaft": 0.9187279151943463,
+    "Sport": 0.995850622406639,
+    "Inland": 0.8557213930348259,
+    "Etat": 0.9147286821705426,
+    "Wissenschaft": 0.8925619834710744,
+    "Kultur": 0.8785046728971962
+  },
+  "train_minutes": 9.41220394000023,
+  "ms_per_document_gpu": 5.565066731504095,
+  "ms_per_document_cpu": 217.65308333366798,
+  "model_size_mb": 439.738404
+}
